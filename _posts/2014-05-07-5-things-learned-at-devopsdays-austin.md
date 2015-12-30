@@ -5,7 +5,6 @@ description: ""
 category: tech
 tags: [devops, conf]
 ---
-{% include JB/setup %}
 A quick post on the 5 things I took away from DevOpsDays Austin 2014.
 
 1. Business is everything!
