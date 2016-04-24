@@ -1,3 +1,20 @@
 NXOS Maintenance Best Practices
 Cisco Live 2015
 BRKDCT-2458
+
+VPC Best Practice
+* VPC Domain IDS
+** use unique vpc domain ids within a contingous L2 domain to avoid MAC overlap
+* VPC Peer Link
+** Should be point-to-point connection & dedicated links
+* VPC Keeapalive Link
+** Dedicate control plane in a dual-supervisor environment. Use management switch
+* VPC Peer Gateway
+** Acts as active gateway for frames addressed to peer switch. Avoid Peer Link forwarding.
+** High Impact/Easy to Implement Quick win
+* VPC Peer Switch
+** Optimizes BPDU Processing, single logical L2 entity
+** High Impact/Easy to Implement Quick win
+* Distribute port-channel member interfaces across line cards within the same chassis
+* Create a map for oversubscription aligned to current and future demand.
+** Deployment practive -- 20:1 at access and 2:1 at Core
