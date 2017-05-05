@@ -1,0 +1,11 @@
+Issues found when testing GNS32.0 the new release.
+
+Using the GNS32.0 remote server and the GSN32.0 gui.
+
+1.) When using a already existing remote server setup the gns.conf images need to be updated.
+    
+    This can be fixed by removing and re-adding the images back to the gns3-gui.
+    
+2.) Ethernet Switches when using local can not connect to remote server connections.
+
+3.) Issue with remote server reporting could not find dynamips on remote server for ethernet switches.
