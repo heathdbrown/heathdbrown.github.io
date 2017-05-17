@@ -2,6 +2,9 @@ Vagrant Issues in 1.9.4
 
 Today, I went to start-up one of my vagrant machines and then the following happened :(.
 
+Possible Solution: http://stackoverflow.com/questions/37312334/error-on-vagrant-up-on-linux
+
+Details on the issue.
 ```
 $ vagrant up
 Bringing machine 'default' up with 'virtualbox' provider...
