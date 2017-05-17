@@ -1,8 +1,15 @@
 * NAPALM - https://github.com/napalm-automation/napalm
 * NSOT - https://nsot.readthedocs.io/en/latest/
+* NetMiko - https://github.com/ktbyers/netmiko
 
 Videos on Network Testing:
 * https://www.youtube.com/watch?v=Pk0LVQSWZ9c&list=PL1Rabu4aHyrwKSkpkyUaeuZ7Rl4P-9Ao4&index=14
 * RobotFramework - http://robotframework.org/
 * https://github.com/CiscoDevNet/ydk-py
 * https://github.com/roboydk
+
+Training:
+* https://github.com/ktbyers/itx2017-net-auto-workshop
+* https://github.com/ktbyers/ansible_course
+* https://github.com/ktbyers/pynet
+* https://www.youtube.com/watch?v=93q-dHC0u0I&index=15&list=PLO8DR5ZGla8ju3ftZv_S6L12jBkZKEJVZ
