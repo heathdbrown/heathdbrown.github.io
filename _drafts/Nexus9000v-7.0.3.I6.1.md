@@ -13,6 +13,8 @@ priority mismatch)
 ```
 Configuration:
 ```
+N9k-1# show run vpc
+
 version 7.0(3)I6(1)
 feature vpc
 
@@ -29,6 +31,7 @@ interface port-channel999
 
 N9k-1#
 
+N9k-2# sh run vpc
 version 7.0(3)I6(1)
 feature vpc
 
