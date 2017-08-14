@@ -11,6 +11,38 @@ r cfs)
 face port-channel999 are being suspended. (Reason: vPC domain/system id /system
 priority mismatch)
 ```
+Configuration:
+```
+version 7.0(3)I6(1)
+feature vpc
+
+vpc domain 100
+  peer-switch
+  role priority 4096
+  system-priority 4096
+  peer-keepalive destination 192.168.1.2 source 192.168.1.1
+  peer-gateway
+  ip arp synchronize
+
+interface port-channel999
+  vpc peer-link
+
+N9k-1#
+
+version 7.0(3)I6(1)
+feature vpc
+
+vpc domain 100
+  peer-switch
+  role priority 8192
+  system-priority 8192
+  peer-keepalive destination 192.168.1.1 source 192.168.1.2
+  peer-gateway
+  ip arp synchronize
+
+interface port-channel999
+  vpc peer-link
+```
 
 Issue: Kernel log message when configuring ethernet ports
 
