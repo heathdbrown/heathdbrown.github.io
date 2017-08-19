@@ -1,5 +1,65 @@
 Version: 7.0.3.I6.1
 
+Issues: Boot loader does not stay after reload.
+
+```
+Trying to read config file /boot/grub/menu.lst.local from (hd0,4)
+ Filesystem type is ext2fs, partition type 0x83
+Number of devices detected by BIOS is 1
+Failed. Trying to read config file from (hd0,5)
+ Filesystem type is ext2fs, partition type 0x83
+Number of devices detected by BIOS is 1
+Failed.
+
+
+
+                Loader Version 5.00.9
+Entering interactive mode
+
+loader > dir
+Setting listing for bootflash:
+Number of devices detected by BIOS is 1
+Number of devices detected by BIOS is 1
+Number of devices detected by BIOS is 1
+Going to print files for device bootflash: 1
+ .rpmstore
+ nxos.7.0.3.I6.1.bin
+ .swtam
+ virtual-instance
+ virtual-instance.conf
+ virt_strg_pool_bf_vdc_1
+ scripts
+ 20170819_153951_poap_26077_init.log
+ platform-sdk.cmd
+Number of devices detected by BIOS is 1
+Number of devices detected by BIOS is 1
+Number of devices detected by BIOS is 1
+Clearing listing for bootflash:
+
+loader > boot nxos.7.0.3.I6.1.bin
+```
+
+Fix: set the boot variable in the running configuration and save before reload.
+
+```
+lab-core1(config)#
+lab-core1(config)# boot nxos nxos.7.0.3.I6.1.bin
+Performing image verification and compatibility check, please wait....
+lab-core1(config)#end
+lab-core1# sh boot
+Current Boot Variables:
+
+sup-1
+NXOS variable = bootflash:/nxos.7.0.3.I6.1.bin
+No module boot variable set
+
+Boot Variables on next reload:
+
+sup-1
+NXOS variable = bootflash:/nxos.7.0.3.I6.1.bin
+No module boot variable set
+```
+
 Issues: VPC peer link does not come up.
 
 ```
