@@ -29,7 +29,9 @@ Fix: Update permissions on the MASTER so that the apache or web-server user can 
 chown smokeping:www-data /etc/smokeping/smokeping_secrets
 ```
 
-## Issue: 
+## Issue: Dig not installed
+
+Test by performing dig localhost
 
 ```
 root@homepib:/etc/smokeping# smokeping --master-url=http://smokeping_master/smokeping/smokeping.cgi --shared-secret=/var/smokeping/secret.txt --cache-dir=/tmp/
@@ -37,6 +39,15 @@ Sent data to Server and got new config in response.
 ERROR: output of '/usr/bin/dig localhost' does not match (?^i:query time:\s+([0-9.]+)\smsec.*)
  at (eval 28) line 1.
 ```
+
+Fix: Install dig
+
+```
+sudo apt-get update -y
+sudo apt-get install dnsutils -y
+```
+
+** I had issues with missing packages and found an `apt-get update` was necessary but also included `--fix-missing` on the install of dnsutils.
 
 # Background Information
 * https://oss.oetiker.ch/smokeping/doc/smokeping_master_slave.en.html
