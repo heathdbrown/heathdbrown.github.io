@@ -12,7 +12,30 @@ sudo apt-get install smokeping sendmail -y
 find . -type f -name '*.rrd' | xargs chown smokeping:www-data
 find . -type f -name '*.rrd' | xargs chmod 0664
 ```
+
+## Version check on master
+
+Due to installing via packages on the master I am getting the 2.0006011 version.
+
+```
+smokeping --version
+2.006011
+```
+
 # Raspberrypi Slave install
+
+## Install on raspberrypi
+
+```
+sudo apt-get install smokeping
+```
+
+## Version of smokeping
+
+```
+smokeping --version
+2.006009
+```
 
 ## Issue: permission denied on `/etc/smokeping/smokeping_secrets`
 
@@ -48,6 +71,12 @@ sudo apt-get install dnsutils -y
 ```
 
 ** I had issues with missing packages and found an `apt-get update` was necessary but also included `--fix-missing` on the install of dnsutils.
+
+## Issue: Slave not updating to master graphs
+
+This one is frustrating as the client says it is updating but nothing shows on the master.
+
+
 
 # Background Information
 * https://oss.oetiker.ch/smokeping/doc/smokeping_master_slave.en.html
