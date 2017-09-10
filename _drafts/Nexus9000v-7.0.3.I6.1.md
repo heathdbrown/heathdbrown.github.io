@@ -98,7 +98,7 @@ feature vpc
 vpc domain 100
   peer-switch
   role priority 8192
-  system-priority 8192
+  system-priority 4096
   peer-keepalive destination 192.168.1.1 source 192.168.1.2
   peer-gateway
   ip arp synchronize
@@ -106,6 +106,7 @@ vpc domain 100
 interface port-channel999
   vpc peer-link
 ```
+Fix: system-priority must match on both devices.
 
 Issue: Kernel log message when configuring ethernet ports
 
