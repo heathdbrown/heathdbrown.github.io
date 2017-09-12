@@ -1,5 +1,6 @@
 Ideas
 - https://github.com/torhve/infping
 - fping to InfluxDB
+  - https://docs.influxdata.com/influxdb/v1.3/introduction/installation
 - fping to graphite
 - fping to a time series DB
