@@ -115,3 +115,4 @@ See: See: https://fabianfischer.de/smokeping-under-debian-with-master-slave-conf
 * https://oss.oetiker.ch/smokeping/doc/smokeping_master_slave.en.html
 * https://github.com/oetiker/SmokePing/wiki/FAQ
 * https://fabianfischer.de/smokeping-under-debian-with-master-slave-configuration/
+* https://ring.nlnog.net/user-guide/
