@@ -7,11 +7,15 @@
 sudo apt-get install smokeping sendmail -y
 ```
 
-## Update ownership for RRD files for smokeping and apache user
+## Update ownership for RRD files for smokeping and web user
 ```
 find . -type f -name '*.rrd' | xargs chown smokeping:www-data
 find . -type f -name '*.rrd' | xargs chmod 0664
 ```
+
+## Make sure folders are setup correctly for master-slave relationship
+See: https://fabianfischer.de/smokeping-under-debian-with-master-slave-configuration/
+
 
 ## Version check on master
 
@@ -21,6 +25,15 @@ Due to installing via packages on the master I am getting the 2.0006011 version.
 smokeping --version
 2.006011
 ```
+## Web Front End on Master
+
+### Apache
+
+### NGINX
+See: 
+* http://blog.imitran.com/2013/08/smokeping-on-nginx/
+* 
+
 
 # Raspberrypi Slave install
 
@@ -98,3 +111,4 @@ Sep  9 23:57:51 homepib smokeping[23508]: DNS: Sleeping 279 seconds.
 # Background Information
 * https://oss.oetiker.ch/smokeping/doc/smokeping_master_slave.en.html
 * https://github.com/oetiker/SmokePing/wiki/FAQ
+* https://fabianfischer.de/smokeping-under-debian-with-master-slave-configuration/
