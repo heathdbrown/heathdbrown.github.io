@@ -107,6 +107,9 @@ Sep  9 23:57:45 homepib smokeping[23508]: DNS: 208.67.222.222: got 1.4000000000e
 Sep  9 23:57:51 homepib smokeping[23508]: Sent data to Server. Server said OK
 Sep  9 23:57:51 homepib smokeping[23508]: DNS: Sleeping 279 seconds.
 ```
+Fix: this is a permission issue on the master
+
+See: See: https://fabianfischer.de/smokeping-under-debian-with-master-slave-configuration/
 
 # Background Information
 * https://oss.oetiker.ch/smokeping/doc/smokeping_master_slave.en.html
